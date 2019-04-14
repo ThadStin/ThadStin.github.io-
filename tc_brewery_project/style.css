@@ -17,6 +17,7 @@ img {
   height: 90%;
   margin: auto;
   margin-right: -200px;
+  z-index: -1;
 }
 
 .info {
