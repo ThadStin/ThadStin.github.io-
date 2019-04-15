@@ -1,6 +1,6 @@
 
 $(() => {
-//need to mess with thi to submit info
+
   $('form').on('submit', (event) => {
     event.preventDefault();
 
@@ -21,8 +21,7 @@ $(() => {
             const $webDiv = $('<div>').addClass('web').text(data[i].website_url)
             const $phoneDiv = $('<div>').addClass('phone').text(data[i].phone)
             const $streetDiv = $('<div>').addClass('street').text(data[i].street)
-            const $cityDiv = $('<div>').addClass('city').text(data[i].city)
-            const $stateDiv = $('<div>').addClass('state').text(data[i].state)
+            const $cityDiv = $('<div>').addClass('city').text(data[i].city + ', ' + data[i].state)
             const $brewery_typeDiv = $('<div>').addClass('brewery_type').text(data[i].brewery_type)
 
               $infoContainer.append($nameDiv)
@@ -30,7 +29,6 @@ $(() => {
               $infoContainer.append($phoneDiv)
               $infoContainer.append($streetDiv)
               $infoContainer.append($cityDiv)
-              $infoContainer.append($stateDiv)
               $infoContainer.append($brewery_typeDiv)
 
               $('.modal-info').append($infoContainer)
@@ -43,7 +41,7 @@ $(() => {
     })
 
    // }
-  })//------end of api call
+ })//------end of api call and population
 //--------beginning of modal pop-up
   // ===================
   // GRABBING ELEMENTS
@@ -53,7 +51,6 @@ $(() => {
   const $closeBtn = $('#close');
   const $modalText = $('.modal-textbox')
   const $modalInfo = $('.modal-info')
-  const $infoContainer = $('.info-container') //had to define agian due to scope
 
   // ===================
   // EVENT HANDLER

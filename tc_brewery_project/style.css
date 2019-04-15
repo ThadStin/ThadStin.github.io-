@@ -55,10 +55,12 @@ form {
 }
 
 .name {
-  padding-top: 5%;
+  padding-top: 3%;
+  font-weight: bold;
+  font-size: 1.25em;
 }
 .brewery_type {
-  padding-bottom: 5%;
+  padding-bottom: 3%;
 }
 /* .modalInfo {
   text-align: center;
