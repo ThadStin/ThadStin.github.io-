@@ -12,47 +12,18 @@
 
   </head>
   <body>
-    <div class="container">
-      <div class="background">
-      <img src="img/blank-us-map.png" alt="USA">
+    <form>
+      <input type="text" placeholder="city name only">
+      <button class="modal-btns" id="submit">Get Brewery Info</button>
+    </form>
+    <div class="modal">
+      <div class="modal-textbox">
+        <div class="modal-footer">
+          <button class="modal-btns" id="close"> X </button>
+        </div>
+        <h2>Breweries</h2>
+        
       </div>
-        <div class="info">
-          <h1>Brewery Info</h1>
-          <form>
-            <input type="text" placeholder="city name only">
-            <input type="submit"  value="Get Brewery Info">
-          </form>
-            <dl>
-              <dt>Brewery Name:</dt>
-              <dd id="name"></dd>
-              <dd id="name"></dd>
-
-              <dt>Website:</dt>
-              <dd id="website_url"></dd>
-              <dd id="website_url"></dd>
-
-              <dt>Phone #:</dt>
-              <dd id="phone"></dd>
-              <dd id="phone"></dd>
-
-              <dt>Address:</dt>
-              <dd id="street"></dd>
-              <dd id="street"></dd>
-
-              <dt>City:</dt>
-              <dd id="city"></dd>
-              <dd id="city"></dd>
-
-              <dt>State:</dt>
-              <dd id="state"></dd>
-              <dd id="state"></dd>
-
-              <dt>Brewery Type:</dt>
-              <dd id="brewery_type"></dd>
-              <dd id="brewery_type"></dd>
-
-            </dl>
-          </div>
-      </div>
+    </div>
   </body>
 </html>
