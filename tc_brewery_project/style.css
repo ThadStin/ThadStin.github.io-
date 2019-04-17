@@ -1,25 +1,56 @@
-body {
-  background-image: url('img/america_beer 2.jpg');
-  background-attachment: fixed;
-  background-position: 65% 10%;
-  background-repeat: no-repeat;
 
-}
 
 .container {
   display: flex;
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
 }
-
-.headline {
-  display: inline-block;
+.background {
+width: 100%;
+height: 100%;
+}
+/*---- sizing of background img-----*/
+.background img {
+  width: 95%;
+  height: 95%;
 }
 
 h1 {
-  font-size: 1.2em;
+  color: ;
+  font-size: 1.3em;
 }
 
+/*------- styling of both buttons -------*/
+.modal-btns {
+ padding: 6px 10px;
+ background-color: navy;
+ border: none;
+ outline: none;
+ border-radius: 5px;
+ color: white;
+}
+/*-------- styling and position of input box and button ----------*/
+.search {
+  margin-top: -2%;
+}
+/*-------- styling of input textbox ----------*/
+input {
+  text-align: center;
+  margin-left: 35%;
+  padding: 1%;
+  font-size: 1.2em;
+ /* clear: both; /*not sure this does anything*/
+}
+/*--------- positions the submit button ------------*/
+#submit {
+ margin-left: 52%;
+ margin-top: 3%;
+}
+
+
+/*/////////////////////////////////// MODAL STYLING ////////////////////////////////////*/
 /*--------- styling of entire modal -----------*/
  .modal {
   font-family: Arial, sans-serif;
@@ -51,30 +82,12 @@ h1 {
   top: 0;
   float: right;
 }
- /*------- styling of both buttons -------*/
-.modal-btns {
-  padding: 6px 10px;
-  background-color: navy;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  color: white;
+
+/*--------- adds space to bottom of brewery_type div to seperate entries -------*/
+.brewery_type {
+  padding-bottom: 3%;
 }
-/*-------- styling and position of input box and button ----------*/
-.search {
-  display: inline-block;
-}
-/*-------- styling of input textbox ----------*/
-input {
-  padding: 8px;
-  font-size: 1.25em;
-  /* clear: both; /*not sure this does anything*/
-}
-/*--------- positions the submit button ------------*/
-#submit {
-  margin-right: 25%;
-  margin-top: 5%;
-}
+
 /*-------- adds space to top of name div and changes font --------------*/
 .name {
   padding-top: 3%;
@@ -82,36 +95,27 @@ input {
   font-size: 1.25em;
   color: navy;
 }
-/*--------- adds space to bottom of brewery_type div to seperate entries -------*/
-.brewery_type {
-  padding-bottom: 3%;
-}
-
-footer {
-  position: absolute;
-  bottom: 5%;
-
-  /* not working */
-}
-
 
 /*--------- makes the word brewery in modal large font and color navy -----------*/
 h2 {
   font-size: 1.75em;
   color: navy;
 }
+/*///////////////////////////// END OF MODAL STYLING //////////////////////////////////*/
+
+
+footer {
+  position: absolute;
+  bottom: 5%;
+}
+
+
+
 
 /*------------------ responsive ---------------*/
 @media (min-width: 600px){
 
-  body{
-    background-image: url('img/america_beer.jpg');
-    background-attachment: fixed;
-    background-position: 10% 30%;
-    background-repeat: no-repeat;
-    height: 80%;
-    width: 70%;
-  }
+
 
 
 }

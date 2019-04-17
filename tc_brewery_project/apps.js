@@ -9,7 +9,7 @@ $(() => {
   $.ajax(
     {
       url:'https://api.openbrewerydb.org/breweries?per_page=20&by_type=micro&by_city=' + userInput,
-    }  //I took out   Might want to put it back in
+    }  
   ).then(
       (data)=>{
 
