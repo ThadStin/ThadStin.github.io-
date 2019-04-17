@@ -9,9 +9,9 @@ Search by city name ONLY and a maximum of 20 results will be returned in a pop-u
 user can scroll through to retreive name, url, phone, street address, city/state, and brewery
 type (just to confirm it is a micro brewery :) ).
 
-TC Brewery Project utilizes the OPEN BREWERY DB api to populate data for the user to search.
+TC Brewery Project utilizes the free OPEN BREWERY DB api to populate data for the user to search.
 It has very clear documentation and is easy to utilize.  There are several parameters you can set 
-for your query.  If you are interested in using it, you can find it here: https://www.openbrewerydb.org/
+for your query.  It returns data in JSON format.  If you are interested in using it, you can find it here: https://www.openbrewerydb.org/
 
 ## Limitations of TC Brewery project:
 
