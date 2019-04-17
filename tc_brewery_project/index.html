@@ -10,24 +10,26 @@
     <script src="apps.js"></script>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   </head>
   <body>
+<!--/////// container div ////////////-->
     <div class="container">
-    <div class="headline">
-      <h1>Search Micro-breweries by City</h1>
-    </div>
-    <div class="background">
-      <img src="img/america_beer_2.jpg" alt="microbrew across America">
-    </div>
-
-
+    <!--////////// headline div /////////////  -->
+      <div class="headline">
+        <h1>Search Micro-breweries by City</h1>
+      </div>
+    <!--////////// background image ////////////  -->
+      <div class="background">
+        <img src="img/america_beer_2.jpg" alt="microbrew across America">
+      </div>
+    <!--////////// text and button field ////////  -->
       <div class="search">
         <form>
           <input type="text" placeholder="city name only">
           <button class="modal-btns" id="submit">Get Brewery Info</button>
         </form>
       </div>
+<!--/////////////////////modal styling - don't touch /////////////////////////  -->
       <div class="modal">
         <div class="modal-textbox">
           <div class="modal-footer">
@@ -38,6 +40,7 @@
           </div>
         </div>
       </div>
+<!--///////////// END of modal styling ///////////////////////////////  -->
     </div>
   <footer>powered by <a href="https://www.openbrewerydb.org/">Open Brewery DB</a>
   </footer>
