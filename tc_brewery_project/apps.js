@@ -2,6 +2,7 @@
 $(() => {
 //-------- set up function for text input and submit button click on api query --------
   $('form').on('submit', (event) => {
+    // prevents modal from disappearing until closed
     event.preventDefault();
 //------- define input for text form
     const userInput = $('input[type="text"]').val();
@@ -14,7 +15,7 @@ $(() => {
       (data)=>{
 
         const popData = () => {
-//------- loop over data to pupulate divs -------
+//------- loop over data to populate and create divs -------
           for (let i = 0; i < data.length; i++) {
             const $infoContainer = $('<div>').addClass('info-container')
             const $nameDiv = $('<div>').addClass('name').text(data[i].name)
@@ -32,10 +33,11 @@ $(() => {
               $infoContainer.append($brewery_typeDiv)
 //--------- appending info container to modal --------
               $('.modal-info').append($infoContainer)
-          }}
+              }
+            }
 //------------- calling function to populate divs in modal ---------------
           popData();
-    },
+        },
     ()=>{
         console.log('bad request');
     })
@@ -45,16 +47,18 @@ $(() => {
 //================== beginning of modal pop-up ====================
 
   //------------  DEFINING VARIABLES and ELEMENTS FOR EVENTS ---------------
+  //--activate submit button
   const $submit = $('#submit');
+  //--activate modal
   const $modal = $('.modal');
+  //--activate close button on modal
   const $closeBtn = $('#close');
-  const $modalText = $('.modal-textbox')
+  //--empties modal info on close to re-populate with fresh data
   const $modalInfo = $('.modal-info')
 
   //------------------------ EVENT HANDLERS --------------------
-  //------- opens the modal
+  //------- shows the modal on click of submit button
   const openModal = () => {
-    //need function to load data in to openModal
     $modal.show();
   }
   //---------- closes the modal and clears $modalInfo divs
@@ -64,9 +68,9 @@ $(() => {
   }
 
   //--------------------- EVENT LISTENERS ------------------
-  //--------- about the game button
+  //--------- on click of submit button, shows modal with info
   $submit.on('click', openModal);
-  //--------- close button
+  //--------- on click of $closeBtn, empties and disappears modal
   $closeBtn.on('click', closeModal);
 
 }); /// end of window onload
